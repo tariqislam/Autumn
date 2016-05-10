@@ -10,6 +10,10 @@
       <username>${env.CI_DEPLOY_USERNAME}</username>
       <password>${env.CI_DEPLOY_PASSWORD}</password>
     </server>
+    <server>
+      <id>00AC2A37</id>
+      <passphrase>${env.GPG_PASSPHRASE}</passphrase>
+    </server>
   </servers>
   <mirrors/>
   <proxies/>
@@ -20,6 +24,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
+        <gpg.keyname>00AC2A37</gpg.keyname>
         <gpg.executable>${env.GPG_EXECUTABLE}</gpg.executable>
         <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
       </properties>
